@@ -1,12 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import App from "./Registrasi/App";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@emotion/react";
+
+const outerTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#3d9d9b",
+    },
+  },
+});
 
 ReactDOM.render(
-    <App />,
-  document.getElementById('root')
+  <ThemeProvider theme={outerTheme}>
+    <App />
+  </ThemeProvider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
